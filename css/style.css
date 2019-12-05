@@ -42,3 +42,12 @@ nav {
 nav li {
   margin-left: 15px;
 }
+
+main {
+  padding: 0 40px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}

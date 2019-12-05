@@ -23,10 +23,16 @@
   </header>
   <main>
     <!-- for loop to update screen  -> max = 5 -->
+    <p>
+      Bem vindo ao Arquivo Musical, você pode consultar informações sobre diversos álbuns lançados e também ajudar
+      a gente a expandir nossa base de dados adicionando novos albuns à nossa coleção.
+    </p>
+    <div class="container">
+      <div class="card">
+        <img src="" alt="" class="cover" />
+        <p class="title"></p><p class="year">()</p>
+      </div>
+    </div>
   </main>
-  <p>
-    Bem vindo ao Arquivo Musical, você pode consultar informações sobre diversos álbuns lançados e também ajudar
-    a gente a expandir nossa base de dados adicionando novos albuns à nossa coleção.
-  </p>
 </body>
 </html>
