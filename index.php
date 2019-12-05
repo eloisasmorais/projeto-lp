@@ -27,12 +27,31 @@
       Bem vindo ao Arquivo Musical, você pode consultar informações sobre diversos álbuns lançados e também ajudar
       a gente a expandir nossa base de dados adicionando novos albuns à nossa coleção.
     </p>
-    <div class="container">
+    <!-- <div class="container">
       <div class="card">
-        <img src="" alt="" class="cover" />
+        <img src="" alt="" id="cover-" />
         <p class="title"></p><p class="year">()</p>
       </div>
-    </div>
+    </div> -->
+    <section class="container">
+      <div class="w-50" id="covers">
+        <div class="cover" id="cover-1" onclick="addBg(1)"></div>
+        <div class="cover" id="cover-2"></div>
+        <div class="cover" id="cover-3"></div>
+        <div class="cover" id="cover-4"></div>
+        <div class="cover" id="cover-5"></div>
+      </div>
+    </section>
   </main>
 </body>
+<script>
+
+  // const cover = document.getElementById('covers').addEventListener("click", function() {
+  //   addBg();
+  // });
+  function addBg(n) {
+    const container = document.getElementById('container');
+    container.classList.add('bg-gray');
+  }
+</script>
 </html>

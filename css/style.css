@@ -47,7 +47,37 @@ main {
   padding: 0 40px;
 }
 .container {
+  /* background-color: #eee; */
+}
+
+.w-50 {
+  margin: 0 auto;
+  max-width: 50%;
   display: flex;
-  flex-wrap: wrap;
-  width: 80%;
+  justify-content: center;
+}
+
+.cover {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 100px;
+  max-width: 500px;
+  height: 500px;
+  background-color: #fff;
+  border: 1px solid black;
+  transition: width .6s ease-in-out; 
+}
+
+.cover:hover {
+  width: 100%;
+}
+
+.cover {
+  background: url('../img/teste.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.bg-gray {
+  background-color: #eee;
 }
