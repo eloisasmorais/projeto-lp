@@ -15,24 +15,27 @@
     </div>
     <nav>
       <ul>
-        <li>Home</li>
-        <li>Procurar disco</li>
-        <li>Adicionar disco</li>
+        <li><button onclick="location.replace('index.php?pagina=inicio')">Home</button></li>
+        <li><button onclick="location.replace('index.php?pagina=listar')">Procurar disco</button></li>
+        <li><button onclick="location.replace('index.php?pagina=cadastrar')">Adicionar disco</button></li>
       </ul>
     </nav>
   </header>
   <main>
-    <!-- for loop to update screen  -> max = 5 -->
+    <?php 
+      // include "DB.php";
+      if(isset($_GET['pagina'])) {
+        $pagina = $_GET['pagina'];
+      } else {
+        $pagina = "inicio";
+      }
+
+      if ($pagina == "inicio") {
+    ?>
     <p>
       Bem vindo ao Arquivo Musical, você pode consultar informações sobre diversos álbuns lançados e também ajudar
       a gente a expandir nossa base de dados adicionando novos albuns à nossa coleção.
     </p>
-    <!-- <div class="container">
-      <div class="card">
-        <img src="" alt="" id="cover-" />
-        <p class="title"></p><p class="year">()</p>
-      </div>
-    </div> -->
     <section class="container">
       <div class="w-50" id="covers">
         <div class="cover" id="cover-1" onclick="addBg(1)"></div>
@@ -42,6 +45,13 @@
         <div class="cover" id="cover-5"></div>
       </div>
     </section>
+    <?php
+      } elseif ($pagina == "cadastrar") {
+        include "Cadastro.php";
+      } elseif ($pagina == "listar") {
+        include "Lista.php";
+      }
+    ?>
   </main>
 </body>
 <script>
